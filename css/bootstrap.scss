@@ -1,0 +1,109 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/_variables";
+
+// 4. Include any default map overrides here
+$grid-columns: 10;
+
+$container-max-widths: (
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1140px,
+xxl: 1560px
+);
+
+.btn {
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 1.25rem;
+    --bs-btn-font-family: inter;
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: normal;
+    --bs-btn-bg: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--bs-btn-bg);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    width: 255px;
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    letter-spacing: 0.48px;
+    position: relative;
+    box-shadow: 0px 24px 44px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: linear-gradient(175deg, #725d4c 0%, #f6d98f 38%, #ffebc2 58%, #725d4c 82%);
+  }
+  
+  .btn:hover {
+    background-color: var(--bs-btn-hover-bg);
+  }
+  
+  .btn-primary {
+    --bs-btn-color: #2f2d30;
+    --bs-btn-bg: #bfa779;
+    --bs-btn-hover-color: #2f2d30;
+    --bs-btn-hover-bg: #e7cfa1;
+    --bs-btn-active-bg: #e7cfa1;
+  }
+  
+  .btn-secondary {
+    --bs-btn-color: #4e152a;
+    --bs-btn-bg: #bfa779;
+    --bs-btn-hover-color: #f0f0f0;
+    --bs-btn-hover-bg: #ab9365;
+    --bs-btn-active-color: #f0f0f0;
+    --bs-btn-active-bg: #ab9365;
+  }
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+$grid-gutter-width: 3rem;
+$gutters: (
+0: 0,
+1: $spacer * .25,
+2: $spacer * .5,
+3: $spacer,
+4: $spacer * 1.5,
+5: $spacer * 3,
+);

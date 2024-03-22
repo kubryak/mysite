@@ -1,0 +1,62 @@
+.banks {
+    padding-top: 85px;
+    padding-bottom: 85px;
+
+    &__text-main {
+        font-size: 20px;
+        line-height: 160%;
+    }
+
+    &__list {
+        line-height: 160%;
+        font-size: 20px;
+        padding-left: 2rem;
+    }
+
+    &__form {
+        padding: 40px 69px;
+        background-color: #3a383b;
+        border-radius: 70px;
+        border: 1px solid var(--color-gold);
+        max-width: 520px;
+        margin-left: auto;
+        box-shadow: var(--shadow);
+
+        &-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            margin-bottom: 40px;
+        }
+
+        .custom-form__wrapper {
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+
+        &-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__card {
+        padding: 23px 27px;
+        border: 1px solid var(--color-brick);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

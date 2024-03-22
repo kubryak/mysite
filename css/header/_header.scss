@@ -1,0 +1,47 @@
+.header {
+    background-image: url('../img/svg/bg-pattern.png');
+    background-repeat: repeat;
+    background-color: #1b191c;
+    height: 90px;
+
+    &__logo {
+        @include hover {
+            opacity: .8;
+        }
+    }
+
+    &__logo-wrapper {
+        column-gap: 2rem;
+    }
+
+    &__logo-text {
+        @include fluid-text(16, 10);
+    }
+
+    &__menu-list {
+        list-style-type: none;
+        column-gap: 2rem;
+    }
+
+    &__menu-link {
+        @include fluid-text(16,10);
+
+        @include hover {
+            color: var(--color-gold);
+        }
+    }
+
+    &__contacts {
+        column-gap: 15px;
+    }
+
+    &__phone-link {
+        @include fluid-text(43, 26);
+    }
+
+    &__phone-number {
+        @include hover {
+            color: var(--color-gold);
+        }
+    }
+}

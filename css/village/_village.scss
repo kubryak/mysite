@@ -1,0 +1,95 @@
+.village {
+    padding-top: 70px;
+    padding-bottom: 110px;
+
+    &__title {
+        @include fluid-text(60, 26);
+
+        background: var(--title-gradient);
+        -webkit-background-clip: text; /* Для браузеров на базе WebKit (Chrome, Safari) */
+        background-clip: text;
+        color: transparent; /* Делаем текст невидимым */
+    }
+
+    &__img {
+        &-title {
+            font-size: 20px;
+            color: var(--color-gray);
+        }
+
+        &-text-main {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-gold);
+            @include fluid-text(156, 81);
+            line-height: 100%;
+        }
+        &-text-secondary{
+            font-family: var(--font-family-base);
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-light);
+        }
+
+        &-text-tertiary {
+            color: var(--color-gold);
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        & &-text-secondary {
+            align-self: center;
+        }
+    }
+
+    &__square {
+        column-gap: 20px;
+    }
+}
+
+.small-image {
+    width: 455px;
+    height: 455px;
+
+    & img {
+        width: 453px;
+        height: 453px;
+    }
+}
+
+.big-image {
+    width: 615px;
+    height: 615px;
+
+    & img {
+        width: 613px;
+        height: 613px;
+    }
+}
+
+.bordered-image {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+
+    & img {
+        position: relative;
+        border-radius: 50%;
+    }
+
+    &::before {
+        --border-width: -1px; /*Ширина границы*/
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: var(--border-width);
+        left: var(--border-width);
+        right: var(--border-width);
+        bottom: var(--border-width);
+        border-radius: inherit;
+        background: var(--metall-gradient);
+    }
+}

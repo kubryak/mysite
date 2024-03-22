@@ -1,0 +1,67 @@
+.footer {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    border-top: 1px solid var(--color-gold);
+
+    &__logo {
+        @include hover {
+            opacity: .8;
+        }
+
+        &-img {
+            max-width: 300px !important;
+            max-height: 100px !important; 
+        }
+    }
+
+    &__location {
+        gap: 20px;
+
+        &-item {
+            max-width: 300px;
+            width: 100%;
+        }
+
+        &-img-container {
+            color: var(--color-gray);
+            gap: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        &-img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+    }
+
+    &__phone {
+        @include fluid-text(56, 38);
+        @include hover {
+            color: var(--color-gold);
+        }
+    }
+
+    &__social-media {
+        gap: 20px !important;
+    }
+
+    &__info {
+        font-size: 12px;
+    }
+
+    &__politics {
+        &-link {
+            @include hover {
+                color: var(--color-gold);
+            }
+        }
+    }
+
+    &__disclaimer {
+        font-size: 12px;
+        color: var(--color-gray);
+    }
+    
+}
