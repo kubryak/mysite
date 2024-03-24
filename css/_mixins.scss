@@ -4,6 +4,11 @@
     font-size: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
 
+@mixin fluid-size-img($max: 200px, $min: 200px) {
+    width: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
+    height: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);;
+}
+
 @mixin reset-link {
     color: inherit;
 

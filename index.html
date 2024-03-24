@@ -147,59 +147,68 @@
         </section>
         <section id="village" class="village">
             <div class="container">
-                <h2 class="section-title">О клубном посёлке</h2>
-                <div class="village__img-container">
-                    <div class="village__img d-flex">
-                        <p class="village__img-title">площадь<br>посёлка</p>
-                        <div class="d-flex">
-                            <p class="village__img-text-main">17</p>
-                            <p class="village__img-text-secondary">Га</p>
-                        </div>
-                    </div>
-                    <div class="small-image bordered-image">
-                        <img src="./img/village/village-1.webp">
-                    </div>
-                </div>
-                <div class="village__img-container">
-                    <div class="village__img">
-                        <p class="village__img-title">количество<br>домов</p>
-                        <div class="d-flex">
-                            <p class="village__img-text-main">130</p>
-                        </div>
-                    </div>
-                    <div class="big-image bordered-image">
-                        <img src="./img/village/village-2.webp">
-                    </div>
-                </div>
-                <div class="village__img-container">
-                    <div class="village__img">
-                        <p class="village__img-title">площадь<br>участков</p>
-                        <div class="d-flex">
-                            <div class="d-flex">
-                                <p class="village__img-text-secondary">от</p>
-                                <p class="village__img-text-main">8</p>
+                <div class="offset-1 position-relative">
+                    <h2 class="section-title">О клубном посёлке</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="village__img-container village__img-container-first">
+                            <div class="village__img d-flex position-absolute">
+                                <p class="village__img-title">площадь<br>посёлка</p>
+                                <div class="d-flex translate-middle-x">
+                                    <p class="village__img-text-main">17</p>
+                                    <p class="village__img-text-secondary">Га</p>
+                                </div>
                             </div>
-                            <img src="./img/village/line.svg" class="">
-                            <div class="d-flex">
-                                <p class="village__img-text-secondary">до</p>
-                                <p class="village__img-text-main">14</p>
-                                <p class="village__img-text-secondary">соток</p>
+                            <div class="position-relative">
+                                <div class="small-image bordered-image bordered-image-first">
+                                    <img src="./img/village/village-1.webp">
+                                </div>
+                                <div class="village__img-circle position-absolute">
+                                    <img src="./img/village/titul_circle.svg" alt="" class="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="small-image bordered-image">
-                        <img src="./img/village/village-3.webp">
-                    </div>
-                    <div class="d-flex village__square">
-                        <div class="d-flex flex-column">
-                            <p class="village__img-title">площадь<br>домов</p>
-                            <p class="village__img-text-tertiary">
-                                от 104,54 м<sup>2</sup><br>
-                                до 284,19 м<sup>2</sup>
-                            </p>
+                        <div class="village__img-container">
+                            <div class="village__img">
+                                <div class="d-flex">
+                                    <p class="village__img-title">количество<br>домов</p>
+                                    <p class="village__img-text-main translate-middle-x">130</p>
+                                </div>
+                            </div>
+                            <div class="big-image bordered-image">
+                                <img src="./img/village/village-2.webp">
+                            </div>
+                            <div class="d-flex village__square">
+                                <div class="d-flex flex-column justify-content-between">
+                                    <p class="village__img-title">площадь<br>домов</p>
+                                    <p class="village__img-text-tertiary">
+                                        от 104,54 м<sup>2</sup><br>
+                                        до 284,19 м<sup>2</sup>
+                                    </p>
+                                </div>
+                                <div class="">
+                                    <img src="./img/village/house-icon.svg" class="">
+                                </div>
+                            </div>
                         </div>
-                        <div class="">
-                            <img src="./img/village/house-icon.svg" class="">
+                    </div>
+                    <div class="village__img-container village__img-container-third d-flex flex-column">
+                        <div class="village__img d-flex position-relative w-fit">
+                            <p class="village__img-title position-absolute start-50">площадь<br>участков</p>
+                            <div class="d-flex position-relative">
+                                <div class="d-flex village__block-from">
+                                    <p class="village__img-text-secondary">от</p>
+                                    <p class="village__img-text-main">8</p>
+                                </div>
+                                <img src="./img/village/line.svg" class="">
+                                <div class="d-flex village__block-to">
+                                    <p class="village__img-text-secondary">до</p>
+                                    <p class="village__img-text-main">14</p>
+                                    <p class="village__img-text-secondary">соток</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-image bordered-image">
+                            <img src="./img/village/village-3.webp">
                         </div>
                     </div>
                 </div>
@@ -443,6 +452,309 @@
                     </div>
                     <div class="col-5 d-flex justify-content-center align-items-center">
                         <img src="./img/location/map.png" alt="Маршрут до посёлка" class="location__map-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="houses" class="houses">
+            <div class="container">
+                <div class="houses__container">
+                    <div class="d-flex justify-content-between mb-40px">
+                        <h2 class="section-title houses__title">Дома</h2>
+                        <div class="d-flex align-items-center justify-content-between gap-3">
+                            <div class="d-flex swiper-button swiper-button-prev-text">
+                                <img class="arrows arrow-left">
+                            </div>
+                            <div class="main-swiper__pagination swiper-pagination"></div>
+                            <div class="d-flex swiper-button swiper-button-next-text">
+                                <img class="arrows arrow-right">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="houses__thumb-swipers">
+                            <!-- swiper start -->
+                            <div class="swiper swiper__houses-pic position-relative">
+                                <div
+                                    class="position-absolute top-0 bottom-0 start-0 end-0 z-2 px-2 d-flex align-items-center justify-content-between gap-3">
+                                    <div class="d-flex swiper-button swiper-button-prev-pic">
+                                        <img class="arrows arrow-left">
+                                    </div>
+                                    <div class="main-swiper__pagination swiper-pagination"></div>
+                                    <div class="d-flex swiper-button swiper-button-next-pic">
+                                        <img class="arrows arrow-right">
+                                    </div>
+                                </div>
+                                <!-- swiper-wrapper start -->
+                                <div class="swiper-wrapper">
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="swiper-slide__house-pic">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                </div>
+                                <!-- swiper-wrapper end -->
+                            </div>
+                            <div class="swiper swiper__houses-thumb">
+                                <div class="swiper-wrapper">
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/1floor.svg" class="floor">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/2floor.svg" class="floor">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <img src="./img/houses/house-img.png" class="">
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                </div>
+                            </div>
+                            <!-- swiper end -->
+                        </div>
+                        <div class="houses__text-swiper">
+                            <!-- swiper start -->
+                            <div class="swiper swiper__houses-desc">
+                                <!-- swiper-wrapper start -->
+                                <div class="swiper-wrapper">
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex flex-column houses__desc-header">
+                                                <h3 class="houses__desc-name">Проект 17</h3>
+                                                <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
+                                                <p class="houses__desc-area">Площадь гаpажа: 69,92 м<sup>2</sup></p>
+                                            </div>
+                                            <div class="d-flex houses__desc-floors">
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">1 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Тамбур: <span>6,45
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Холл: <span>11,62
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Гардероб: <span>5,07
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Бойлерная<br>(постирочная):
+                                                            <span>16,44 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">С/у: <span>6,54
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кухня-гостинная: <span>52,52
+                                                                м<sup>2</sup></span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">2 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Холл: <span>13,94
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Спальня: <span>15,11 и 15,24
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">С/у: <span>7,42
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кабинет: <span>12,77
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Мастер-спальня с с/у и&nbsp;гардеробной:
+                                                            <span>30,07 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">Высота потолков:
+                                                            <span>от&nbsp;3&nbsp;метров</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column houses__desc-buttons">
+                                                <div class="btn btn-primary shadow-none">Забронировать</div>
+                                                <div class="btn btn-secondary shadow-none">Получить консультацию</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex flex-column houses__desc-header">
+                                                <h3 class="houses__desc-name">Проект 17</h3>
+                                                <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
+                                                <p class="houses__desc-area">Площадь гаpажа: 69,92 м<sup>2</sup></p>
+                                            </div>
+                                            <div class="d-flex houses__desc-floors">
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">1 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Тамбур: <span>6,45
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Холл: <span>11,62
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Гардероб: <span>5,07
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Бойлерная<br>(постирочная):
+                                                            <span>16,44 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">С/у: <span>6,54
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кухня-гостинная: <span>52,52
+                                                                м<sup>2</sup></span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">2 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Холл: <span>13,94
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Спальня: <span>15,11 и 15,24
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">С/у: <span>7,42
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кабинет: <span>12,77
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Мастер-спальня с с/у и гардеробной:
+                                                            <span>30,07 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">Высота потолков:
+                                                            <span>от&nbsp;3&nbsp;метров</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column houses__desc-buttons">
+                                                <div class="btn btn-primary shadow-none">Забронировать</div>
+                                                <div class="btn btn-secondary shadow-none">Получить консультацию</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                    <!-- swiper-slide start -->
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex flex-column houses__desc-header">
+                                                <h3 class="houses__desc-name">Проект 17</h3>
+                                                <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
+                                                <p class="houses__desc-area">Площадь гаpажа: 69,92 м<sup>2</sup></p>
+                                            </div>
+                                            <div class="d-flex houses__desc-floors">
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">1 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Тамбур: <span>6,45
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Холл: <span>11,62
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Гардероб: <span>5,07
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Бойлерная<br>(постирочная):
+                                                            <span>16,44 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">С/у: <span>6,54
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кухня-гостинная: <span>52,52
+                                                                м<sup>2</sup></span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column w-50 houses__desc-floors-list">
+                                                    <h4 class="houses__desc-floor">2 этаж</h4>
+                                                    <a href="" class="houses__desc-link">показать план</a>
+                                                    <div class="houses__desc-area">
+                                                        <p class="houses__area-item">Холл: <span>13,94
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Спальня: <span>15,11 и 15,24
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">С/у: <span>7,42
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Кабинет: <span>12,77
+                                                                м<sup>2</sup></span></p>
+                                                        <p class="houses__area-item">Мастер-спальня с с/у и гардеробной:
+                                                            <span>30,07 м<sup>2</sup></span>
+                                                        </p>
+                                                        <p class="houses__area-item">Высота потолков:
+                                                            <span>от&nbsp;3&nbsp;метров</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column houses__desc-buttons">
+                                                <div class="btn btn-primary shadow-none">Забронировать</div>
+                                                <div class="btn btn-secondary shadow-none">Получить консультацию</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- swiper-slide end -->
+                                </div>
+                                <!-- swiper-wrapper end -->
+                            </div>
+                            <!-- swiper end -->
+                        </div>
                     </div>
                 </div>
             </div>

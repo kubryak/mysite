@@ -1,0 +1,118 @@
+.houses {
+    background-color: var(--color-dark-alt);
+    background-image: url("../img/svg/bg-pattern.png");
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__container {
+        background-color: var(--color-dark);
+        border-radius: 72px;
+        border: 1px solid var(--color-gold);
+        padding: 25px 80px 60px;
+    }
+
+    &__thumb-swipers {
+        width: 64%;
+    }
+
+    &__text-swiper {
+        width: 33%;
+    }
+
+    .swiper__houses {
+        &-pic {
+            max-height: 570px;
+            margin-bottom: 15px;
+
+            .swiper-slide img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-thumb {
+            height: 120px;
+
+            .swiper-slide {
+                width: 120px;
+                border: 1px solid var(--color-gray);
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .floor {
+                    object-fit: contain;
+                }
+
+                &-thumb-active {
+                    border: 2px solid var(--color-gold);
+                }
+            }
+        }
+    }
+
+    &__desc {
+        &-header {
+            gap: 14px;
+            margin-bottom: 40px;
+
+            .houses__desc-name {
+                @include fluid-text(38, 20);
+                color: var(--color-gold);
+                font-weight: 400;
+            }
+
+            .houses__desc-area {
+                font-size: 28px;
+                color: var(--color-gray);
+            }
+        }
+
+        &-floors {
+            gap: 15px;
+            margin-bottom: 60px;
+
+            &-list {
+                gap: 20px;
+            }
+
+            .houses__desc {
+                &-floor {
+                    font-size: 28px;
+                    color: var(--color-gold);
+                    font-weight: 500;
+                }
+
+                &-link {
+                    color: var(--color-gold);
+                    width: fit-content;
+                    border-bottom: 1px solid var(--color-gold);
+
+                    @include hover {
+                        opacity: .8;
+                    }
+                }
+
+                &-area {
+                    font-weight: 500;
+                    line-height: 150%;
+                    color: var(--color-gray);
+
+                    & span {
+                        color: var(--color-light);
+                    }
+                }
+            }
+        }
+
+        &-buttons {
+            gap: 20px;
+            margin-left: 1px;
+            margin-bottom: 1px;
+        }
+    }
+}

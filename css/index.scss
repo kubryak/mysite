@@ -4,8 +4,8 @@
 @import url(../fonts/fonts.css);
 
 @import "./header/header.scss", "./mainSwiper/mainSwiper", "./village/village",
-    "./improvement/improvement", "./location/location", "./banks/banks",
-    "./footer/footer";
+    "./improvement/improvement", "./location/location", "./houses/houses",
+    "./banks/banks", "./footer/footer";
 
 :root {
     --color-dark: #2f2d30;
@@ -35,23 +35,6 @@
     --button-height: 60px;
 
     --transition-duration: 0.2s;
-}
-
-// styles
-
-.test {
-    background: var(--title-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 100px;
-}
-
-.pattern-parent {
-    background-image: url("../img/svg/bg-pattern.png");
-    background-repeat: repeat;
-    background-color: #1b191c;
-    height: 200px;
 }
 
 // global
@@ -101,6 +84,14 @@ ul {
     max-width: 225px;
     max-height: 50px;
     object-fit: contain;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.shadow-none {
+    box-shadow: none;
 }
 
 .section-title {
@@ -226,7 +217,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: inherit;
+    background-color: rgba(28, 28, 28, 0.5);
     flex-shrink: 0;
     z-index: 1;
     transition-duration: var(--transition-duration);
@@ -260,5 +251,5 @@ ul {
 
     &-bullet-active {
         background: var(--color-gold);
-      }
+    }
 }

@@ -2,13 +2,8 @@
     padding-top: 70px;
     padding-bottom: 110px;
 
-    &__title {
-        @include fluid-text(60, 26);
-
-        background: var(--title-gradient);
-        -webkit-background-clip: text; /* Для браузеров на базе WebKit (Chrome, Safari) */
-        background-clip: text;
-        color: transparent; /* Делаем текст невидимым */
+    .section-title {
+        margin-bottom: 100px;
     }
 
     &__img {
@@ -18,12 +13,12 @@
         }
 
         &-text-main {
-            font-family: 'Playfair Display', serif;
+            font-family: "Playfair Display", serif;
             color: var(--color-gold);
             @include fluid-text(156, 81);
             line-height: 100%;
         }
-        &-text-secondary{
+        &-text-secondary {
             font-family: var(--font-family-base);
             font-size: 20px;
             font-weight: 500;
@@ -39,30 +34,77 @@
         & &-text-secondary {
             align-self: center;
         }
+
+        &-container {
+            &-first {
+                width: 613px;
+            }
+            &-third {
+                width: 55%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(-70%);
+
+                .village__img {
+                    align-self: end;
+                    transform: translate(0%, 50%);
+                }
+            }
+        }
+
+        &-circle {
+            bottom: 0;
+            transform: translateY(65%);
+
+            img {
+                @include fluid-size-img(244, 120);
+                object-fit: contain;
+            }
+        }
     }
 
     &__square {
         column-gap: 20px;
     }
+
+    &__block {
+        &-from {
+            position: relative;
+            right: -2rem;
+            top: -2rem;
+        }
+
+        &-to {
+            position: relative;
+            left: -3rem;
+            bottom: -2.5rem;
+        }
+    }
 }
 
 .small-image {
-    width: 455px;
-    height: 455px;
+    @include fluid-size-img(455, 230);
+    // width: 455px;
+    // height: 455px;
 
     & img {
-        width: 453px;
-        height: 453px;
+        @include fluid-size-img(453, 228);
+        // width: 453px;
+        // height: 453px;
     }
 }
 
 .big-image {
-    width: 615px;
-    height: 615px;
+    @include fluid-size-img(615, 230);
+    // width: 615px;
+    // height: 615px;
+    margin-bottom: 125px;
 
     & img {
-        width: 613px;
-        height: 613px;
+        @include fluid-size-img(613, 228);
+        // width: 613px;
+        // height: 613px;
     }
 }
 
@@ -91,5 +133,9 @@
         bottom: var(--border-width);
         border-radius: inherit;
         background: var(--metall-gradient);
+    }
+
+    &-first {
+        left: 25%;
     }
 }

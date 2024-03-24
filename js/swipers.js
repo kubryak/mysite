@@ -36,6 +36,34 @@ const improvementSwiper = new Swiper('.swiper.swiper__improvement', {
 const gallerySwiper = new Swiper ('.swiper.swiper__gallery', {
   slidesPerView: 1,
   loop: true,
+  allowTouchMove: false,
 });
 
 improvementSwiper.controller.control = gallerySwiper;
+
+const housesThumbSwiper = new Swiper('.swiper.swiper__houses-thumb', {
+  spaceBetween: 14,
+  slidesPerView: 'auto',
+  freeMode: true,
+});
+
+const housesPicSwiper = new Swiper('.swiper.swiper__houses-pic', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button.swiper-button-next-pic',
+    prevEl: '.swiper-button.swiper-button-prev-pic',
+  },
+  thumbs: {
+    swiper: housesThumbSwiper,
+  },
+});
+
+const housesTextSwiper = new Swiper('.swiper.swiper__houses-desc', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button.swiper-button-next-text',
+    prevEl: '.swiper-button.swiper-button-prev-text',
+  },
+});
