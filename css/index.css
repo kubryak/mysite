@@ -252,8 +252,7 @@
      object-fit: cover;
 }
 .improvement__card-text {
-  max-width: 300px;
-  margin-left: 20px;
+  max-width: 100%;
   gap: 16px;
 }
 .improvement__card-text-title {
@@ -309,6 +308,78 @@
 
 .fourth-img {
   grid-area: 3/2/4/3;
+}
+
+.plan {
+  background-color: var(--color-dark-alt);
+  padding-top: 90px;
+  padding-bottom: 120px;
+}
+.plan__map {
+  border-radius: 70px;
+  width: 100%;
+  display: block;
+}
+.plan .home-area {
+  fill: transparent;
+  stroke: #ffffff;
+  stroke-width: 1;
+  stroke-opacity: 0.5;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .plan .home-area:hover {
+    fill: var(--color-light);
+    fill-opacity: 0.5;
+  }
+}
+.plan .home-area:active {
+  fill: var(--color-light);
+  fill-opacity: 0.5;
+}
+.plan .home-area_active {
+  fill: var(--color-light);
+  fill-opacity: 0.5;
+}
+.plan__modal {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border-radius: 40px;
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  gap: 10px;
+}
+.plan__modal .modal__link {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--color-brick);
+  font-weight: 700;
+  margin-top: 30px;
+}
+@media (hover: hover) {
+  .plan__modal .modal__link:hover {
+    opacity: 0.8;
+  }
+}
+.plan__modal .modal__link:active {
+  opacity: 0.8;
+}
+.plan__modal .modal__link span {
+  border-bottom: 1px solid var(--color-brick);
+}
+
+.info-panel {
+  position: absolute;
+  width: 260px;
+  height: 270px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Помещаем панель над участками */
+  display: none; /* Начальное скрытие панели */
 }
 
 .location {
@@ -387,11 +458,12 @@
 }
 .houses .swiper__houses-pic {
   max-height: 570px;
+  height: 100%;
   margin-bottom: 15px;
 }
 .houses .swiper__houses-pic .swiper-slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -677,6 +749,10 @@ ul {
   color: transparent; /* Делаем текст невидимым */
 }
 
+.mb-25px {
+  margin-bottom: 25px;
+}
+
 .mb-40px {
   margin-bottom: 40px;
 }
@@ -805,6 +881,12 @@ ul {
 }
 .swiper-button:hover .arrow-right {
   content: url(../img/svg/arrow-right-dark.svg);
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
 }
 
 .swiper-pagination-bullet {

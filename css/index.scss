@@ -4,7 +4,7 @@
 @import url(../fonts/fonts.css);
 
 @import "./header/header.scss", "./mainSwiper/mainSwiper", "./village/village",
-    "./improvement/improvement", "./location/location", "./houses/houses",
+    "./improvement/improvement", "./plan/plan", "./location/location", "./houses/houses",
     "./banks/banks", "./footer/footer";
 
 :root {
@@ -103,6 +103,7 @@ ul {
     color: transparent; /* Делаем текст невидимым */
 }
 
+@include margin-bottom(25px);
 @include margin-bottom(40px);
 @include margin-bottom(50px);
 @include margin-bottom(65px);
@@ -240,6 +241,12 @@ ul {
     &:hover .arrow-right {
         content: url(../img/svg/arrow-right-dark.svg);
     }
+}
+
+.swiper-button-disabled {
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
 }
 
 .swiper-pagination {
