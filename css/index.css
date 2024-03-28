@@ -341,7 +341,7 @@
   fill: var(--color-light);
   fill-opacity: 0.5;
 }
-.plan__modal {
+.plan__modal .modal__wrapper {
   background-color: var(--color-light);
   color: var(--color-dark);
   border-radius: 40px;
@@ -350,6 +350,24 @@
   height: auto;
   padding: 40px;
   gap: 10px;
+}
+.plan__modal .modal__close-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  border: 1px solid var(--color-light);
+  top: -25px;
+  right: -30px;
+  transition-duration: var(--transition-duration);
+}
+@media (hover: hover) {
+  .plan__modal .modal__close-icon:hover {
+    opacity: 0.8;
+  }
+}
+.plan__modal .modal__close-icon:active {
+  opacity: 0.8;
 }
 .plan__modal .modal__link {
   width: -moz-fit-content;
@@ -369,17 +387,53 @@
 .plan__modal .modal__link span {
   border-bottom: 1px solid var(--color-brick);
 }
-
-.info-panel {
-  position: absolute;
-  width: 260px;
-  height: 270px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Помещаем панель над участками */
-  display: none; /* Начальное скрытие панели */
+@media screen and (max-width: 991px) {
+  .plan .container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .plan__scroll {
+    overflow: scroll;
+  }
+  .plan__modal_type_mobile {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .plan__mask-wrapper {
+    background: transparent;
+    transition: background 0.5s ease;
+  }
+  .plan__mask-wrapper_type_mobile {
+    background: rgba(47, 45, 48, 0.4);
+  }
+  .plan__map {
+    border-radius: 0;
+  }
+  .plan__map-wrapper {
+    width: 1120px;
+  }
+  .plan__map-helper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 10;
+    background: #000;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
+  }
+  .plan__map-helper::before {
+    content: "";
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    background-image: url(../img/plan/scroll_helper.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .location {

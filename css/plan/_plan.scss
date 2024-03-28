@@ -28,16 +28,35 @@
     }
 
     &__modal {
-        background-color: var(--color-light);
-        color: var(--color-dark);
-        border-radius: 40px;
-        max-width: 260px;
-        width: 100%;
-        height: auto;
-        padding: 40px;
-        gap: 10px;
-
         .modal {
+            &__wrapper {
+                background-color: var(--color-light);
+                color: var(--color-dark);
+                border-radius: 40px;
+                max-width: 260px;
+                width: 100%;
+                height: auto;
+                padding: 40px;
+                gap: 10px;
+            }
+
+            &__close {
+                &-icon {
+                    width: 40px;
+                    height: 40px;
+                    background-color: var(--color-dark);
+                    border-radius: 50%;
+                    border: 1px solid var(--color-light);
+                    top: -25px;
+                    right: -30px;
+                    transition-duration: var(--transition-duration);
+
+                    @include hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
             &__link {
                 width: fit-content;
                 color: var(--color-brick);
@@ -45,25 +64,71 @@
                 margin-top: 30px;
 
                 @include hover {
-                  opacity: .8;
+                    opacity: 0.8;
                 }
 
                 span {
-                  border-bottom: 1px solid var(--color-brick);
+                    border-bottom: 1px solid var(--color-brick);
                 }
             }
         }
     }
-}
 
-.info-panel {
-    position: absolute;
-    width: 260px;
-    height: 270px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 999; /* Помещаем панель над участками */
-    display: none; /* Начальное скрытие панели */
+    @media screen and (max-width: 991px) {
+        .container {
+            max-width: 100%;
+            // width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__scroll {
+            overflow: scroll;
+        }
+
+        &__modal_type_mobile {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__mask-wrapper {
+            background: transparent;
+            transition: background 0.5s ease;
+        }
+
+        &__mask-wrapper_type_mobile {
+            background: rgba(47, 45, 48, 0.4);
+        }
+
+        &__map {
+            border-radius: 0;
+
+            &-wrapper {
+                width: 1120px;
+            }
+
+            &-helper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                z-index: 10;
+                background: #000;
+                opacity: 0.6;
+                transition: opacity 0.5s ease;
+
+                &::before {
+                    content: "";
+                    margin: auto;
+                    width: 75px;
+                    height: 75px;
+                    background-image: url(../img/plan/scroll_helper.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
 }
