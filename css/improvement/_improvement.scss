@@ -8,7 +8,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Две колонки */
-        grid-template-rows: repeat(3, 220px); /* Три строки */
+        grid-template-rows: repeat(3, 1fr); /* Три строки */
         cursor: url('../img/improvement/zoom-icon.svg') 18 18, auto;
 
         & a {
@@ -29,11 +29,19 @@
         background-color: var(--color-dark);
         padding: 50px 0;
         border-radius: 70px;
+        border: 1px solid var(--color-gold);
+
+        @media screen and (max-width:991px) {
+            .section-title {
+                text-align: center;
+            }
+        }
     }
 
     &__card {
-        max-width: 320px;
+        width: 320px;
         gap: 30px;
+        align-items: center;
 
         &-img {
             border-radius: 50%;
@@ -46,11 +54,16 @@
         &-text {
             max-width: 100%;
             gap: 16px;
+            text-align: center;
 
             &-title {
                 font-size: 26px;
                 font-weight: 500;
                 color: var(--color-gold);
+
+                @media screen and (max-width:1200px) {
+                    font-size: 20px;
+                }
             }
 
             &-description {
@@ -67,20 +80,47 @@
             font-weight: 500;
             color: var(--color-gold);
             margin-bottom: 30px;
+
+            @media screen and (max-width:991px) {
+                font-size: 20px;
+            }
         }
 
         &-text {
             font-size: 20px;
             height: 140px;
+
+            @media screen and (max-width:991px) {
+                font-size: 14px;
+                height: 80px;
+            }
         }
 
         &-navigation {
             gap: 20px;
+
+            @media screen and (max-width:991px) {
+                align-self: end;
+            }
         }
     }
 
     &__gallery {
-
+        .first-img {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        
+        .second-img {
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        
+        .third-img {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+        
+        .fourth-img {
+            grid-area: 3 / 2 / 4 / 3;
+        }
     }
 }
 
@@ -98,20 +138,9 @@
         height: 37px;
         object-fit: contain;
     }
-}
 
-.first-img {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.second-img {
-    grid-area: 1 / 2 / 3 / 3;
-}
-
-.third-img {
-    grid-area: 2 / 1 / 4 / 2;
-}
-
-.fourth-img {
-    grid-area: 3 / 2 / 4 / 3;
+    @media screen and (max-width:991px) {
+        max-width: fit-content;
+        margin-bottom: 40px;
+    }
 }

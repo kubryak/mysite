@@ -71,6 +71,10 @@
                     border-bottom: 1px solid var(--color-brick);
                 }
             }
+
+            &__title {
+                font-size: 24px;
+            }
         }
     }
 
@@ -128,6 +132,27 @@
                     background-repeat: no-repeat;
                     background-position: center;
                 }
+            }
+        }
+        .plan__modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+        }
+
+        .modal__wrapper {
+            width: 260px;
+            height: 270px;
+
+            .modal__title {
+                font-size: 20px;
+            }
+
+            .modal__area {
+                font-size: 14px;
             }
         }
     }

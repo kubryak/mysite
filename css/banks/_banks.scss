@@ -2,14 +2,12 @@
     padding-top: 85px;
     padding-bottom: 85px;
 
-    &__text-main {
+    &__text {
         font-size: 20px;
         line-height: 160%;
     }
 
     &__list {
-        line-height: 160%;
-        font-size: 20px;
         padding-left: 2rem;
     }
 
@@ -49,6 +47,10 @@
             font-size: 20px;
             margin-bottom: 30px;
         }
+
+        &-wrapper {
+            margin-top: 65px;
+        }
     }
 
     &__card {
@@ -59,5 +61,63 @@
         align-items: center;
         justify-content: center;
         height: 82px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .banks {
+
+            &__text {
+                font-size: 14px;
+            }
+
+            &__cards {
+                gap: 8px;
+                
+                &-wrapper {
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+
+                &-text {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__card {
+                padding: 12px 13px;
+                border-radius: 8.5px;
+                height: 40px;
+
+                 img {
+                    width: 100%;
+                    height: 100%;
+                 }
+
+                 &_type_domrf {
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                 }
+            }
+
+            &__form {
+                margin: 0 auto;
+                border-radius: 40px;
+                padding: 40px 35px;
+                max-width: 350px;
+
+                &-title {
+                    font-size: 20px;
+                }
+
+                &-text {
+                    font-size: 14px;
+                }
+
+                .custom-checkbox__text {
+                    font-size: 10px;
+                }
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@
 @import url(./vendor/normalize.css);
 @import url(../fonts/fonts.css);
 
-@import "./header/header.scss", "./mainSwiper/mainSwiper", "./village/village",
+@import "./header/header.scss", "./nav/nav", "./modal/modal", "./mainSwiper/mainSwiper", "./village/village",
     "./improvement/improvement", "./plan/plan", "./location/location", "./houses/houses",
     "./banks/banks", "./footer/footer";
 
@@ -81,8 +81,8 @@ ul {
 }
 
 .logo {
-    max-width: 225px;
-    max-height: 50px;
+    width: 100%;
+    // max-height: 50px;
     object-fit: contain;
 }
 
@@ -94,6 +94,10 @@ ul {
     box-shadow: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .section-title {
     @include fluid-text(60, 26);
 
@@ -101,6 +105,11 @@ ul {
     -webkit-background-clip: text; /* Для браузеров на базе WebKit (Chrome, Safari) */
     background-clip: text;
     color: transparent; /* Делаем текст невидимым */
+
+    @media screen and (max-width:991px) {
+        background: none;
+        color: var(--color-gold);
+    }
 }
 
 @include margin-bottom(25px);
@@ -108,6 +117,20 @@ ul {
 @include margin-bottom(50px);
 @include margin-bottom(65px);
 @include margin-bottom(90px);
+
+@include margin-bottom-sm(10px);
+@include margin-bottom-sm(20px);
+@include margin-bottom-sm(40px);
+
+@media screen and (max-width: 991px){
+    .row-gap-20px {
+        row-gap: 20px;
+    }
+
+    .row-gap-30px {
+        row-gap: 30px;
+    }
+}
 
 .social-media {
     gap: 10px;
@@ -147,6 +170,12 @@ ul {
     max-width: 100%;
 }
 
+.custom-checkbox__link {
+    @include hover {
+        color: var(--color-gold);
+    }
+}
+
 .custom-checkbox__input {
     position: absolute;
     z-index: -1;
@@ -177,39 +206,6 @@ ul {
     background-image: url("../img/svg/checkmark.svg");
 }
 
-// .swiper-button {
-//     border: 2px solid var(--color-light);
-//     border-radius: 50%;
-//     width: 48px;
-//     height: 48px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: inherit;
-//     flex-shrink: 0;
-//     z-index: 1;
-//     transition-duration: var(--transition-duration);
-
-//     @include hover {
-//         background-color: var(--color-light);
-//     }
-
-//     .arrow-left {
-//         content: url(../img/svg/arrow-left.svg);
-//         transition: content .3s ease;
-//     }
-//     &:hover .arrow-left {
-//         content: url(../img/svg/arrow-left-dark.svg);
-//     }
-//     .arrow-right {
-//         content: url(../img/svg/arrow-right.svg);
-//         transition: content .3s ease;
-//     }
-//     &:hover .arrow-right {
-//         content: url(../img/svg/arrow-right-dark.svg);
-//     }
-// }
-
 .swiper-button {
     border: 2px solid var(--color-light);
     border-radius: 50%;
@@ -231,17 +227,44 @@ ul {
         content: url(../img/svg/arrow-left.svg);
         transform: translate(-10%);
     }
-    &:hover .arrow-left {
-        content: url(../img/svg/arrow-left-dark.svg);
-    }
+
     & .arrow-right {
         content: url(../img/svg/arrow-right.svg);
         transform: translate(10%);
     }
-    &:hover .arrow-right {
-        content: url(../img/svg/arrow-right-dark.svg);
-    }
+
+    @media (hover: hover) {
+        &:hover {
+          .arrow-left {
+            content: url(../img/svg/arrow-left-dark.svg); 
+          }
+
+          .arrow-right {
+            content: url(../img/svg/arrow-right-dark.svg); 
+          }
+        }
+      }
+      
+      // Для устройств без поддержки ховера
+      @media (hover: none) {
+        &:active {
+          .arrow-left {
+            content: url(../img/svg/arrow-left-dark.svg); 
+          }
+
+          .arrow-right {
+            content: url(../img/svg/arrow-right-dark.svg); 
+          }
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        width: 40px;
+        height: 40px;
+      }
 }
+
+
 
 .swiper-button-disabled {
     opacity: .35;

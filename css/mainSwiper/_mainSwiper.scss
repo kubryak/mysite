@@ -46,5 +46,44 @@
                 }
             }
         }
+        &__pagination {
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .mainSwiper {
+            .background-swiper {
+                .swiper-slide::before {
+                    height: 660px;
+                }
+            }
+        }
+        .main-swiper {
+            &__wrapper {
+                max-width: 335px;
+                .btn-primary {
+                    width: 185px;
+                    font-size: 14px;
+                }
+                .swiper-slide {
+                    &__title {
+                        height: 140px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .mainSwiper {
+            &__navigation {
+                z-index: 2;
+                bottom: 40px !important;
+                top: auto !important;
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@
 
 @mixin fluid-size-img($max: 200px, $min: 200px) {
     width: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
-    height: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);;
+    height: clamp(#{$min}px, #{$max / 1920 * 100}vw, #{$max}px);
 }
 
 @mixin reset-link {
@@ -26,9 +26,17 @@
 
 @mixin margin-bottom($value) {
     .mb-#{$value} {
-      margin-bottom: $value;
+        margin-bottom: $value;
     }
-  }
+}
+
+@mixin margin-bottom-sm($value) {
+    @media screen and (max-width: 991px) {
+        .mb-sm-#{$value} {
+            margin-bottom: $value;
+        }
+    }
+}
 
 // media
 
@@ -84,8 +92,9 @@ $mobile: 767px;
         }
     }
 
-    @media (hover: none) {}
-        &:active {
-            @content;
-        }
+    @media (hover: none) {
+    }
+    &:active {
+        @content;
+    }
 }

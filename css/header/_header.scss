@@ -4,7 +4,14 @@
     background-color: #1b191c;
     height: 90px;
 
+    @media screen and (max-width: 991px){
+        height: 60px;
+        background-image: none;
+        background-color: inherit;
+    }
+
     &__logo {
+        max-width: 225px;
         @include hover {
             opacity: .8;
         }
@@ -42,6 +49,21 @@
     &__phone-number {
         @include hover {
             color: var(--color-gold);
+        }
+    }
+
+    .button__burger-menu {
+        background: transparent;
+        border: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__logo {
+            max-width: 145px;
+        }
+
+        &__logo-wrapper {
+            column-gap: 1rem;
         }
     }
 }

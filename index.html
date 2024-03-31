@@ -26,19 +26,19 @@
                 <nav class="header__menu d-none d-lg-block">
                     <ul class="header__menu-list d-flex align-items-center">
                         <li class="header__menu-item">
-                            <a href="" class="header__menu-link">О&nbsp;посёлке</a>
+                            <a href="#village" class="header__menu-link">О&nbsp;посёлке</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="" class="header__menu-link">Дома</a>
+                            <a href="#houses" class="header__menu-link">Дома</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="" class="header__menu-link">Генплан</a>
+                            <a href="#plan" class="header__menu-link">Генплан</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="" class="header__menu-link">Способы&nbsp;покупки</a>
+                            <a href="#banks" class="header__menu-link">Способы&nbsp;покупки</a>
                         </li>
                         <li class="header__menu-item">
-                            <a href="" class="header__menu-link">Контакты</a>
+                            <a href="#location" class="header__menu-link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -56,11 +56,121 @@
                     </div>
                 </div>
                 <button class="button__burger-menu burger-button d-block d-lg-none" type="button">
-                    <span class="invisible">Open navigation menu</span>
+                    <img src="./img/svg/menu-icon.svg" class="burger-menu__img">
                 </button>
             </div>
         </div>
     </header>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="d-flex flex-column h-100">
+                <div class="d-flex justify-content-end">
+                    <button class="nav__close-btn">
+                        <img src="./img/svg/close-icon.svg" class="close-btn__img">
+                    </button>
+                </div>
+                <div class="nav__wrapper d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="nav__logo-wrapper d-flex flex-column">
+                            <a href="" class="nav__logo">
+                                <img src="./img/svg/logo.svg" alt="Titul" class="logo__image logo">
+                            </a>
+                            <p class="nav__logo-text">Клубный посёлок<br>премиум-класса в Зубово</p>
+                        </div>
+                        <div class="nav__menu">
+                            <ul class="nav__menu-list d-flex flex-column">
+                                <li class="nav__menu-item">
+                                    <a href="#village" class="nav__menu-link">О&nbsp;посёлке</a>
+                                </li>
+                                <li class="nav__menu-item">
+                                    <a href="#houses" class="nav__menu-link">Дома</a>
+                                </li>
+                                <li class="nav__menu-item">
+                                    <a href="#plan" class="nav__menu-link">Генплан</a>
+                                </li>
+                                <li class="nav__menu-item">
+                                    <a href="#banks" class="nav__menu-link">Способы&nbsp;покупки</a>
+                                </li>
+                                <li class="nav__menu-item">
+                                    <a href="#location" class="nav__menu-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav__contacts d-flex flex-column">
+                        <div class="nav__phone-link">
+                            <a href="" class="nav__phone-number">201-00-00</a>
+                        </div>
+                        <div class="social-media nav__social-media d-flex">
+                            <a href="" class="social-media-icon">
+                                <img src="./img/svg/tg-icon.svg" alt="Telegram icon" class="social-media-image">
+                            </a>
+                            <a href="" class="social-media-icon">
+                                <img src="./img/svg/vk-icon.svg" alt="VK icon" class="social-media-image">
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column nav__location">
+                            <div class="nav__location-img-container d-flex">
+                                <img src="./img/svg/location.svg" alt="Иконка локации" class="nav__location-img">
+                                <p class="nav__location-img-text">Адрес отдела продаж</p>
+                            </div>
+                            п. Зубово, улица им. Минигали Шаймуратова, 19
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal" id="callorder">
+        <div class="modal__wrapper position-relative d-flex flex-column flex-lg-row">
+            <div class="modal__close position-absolute" data-fancybox-close>
+                <img src="./img/svg/close-icon.svg" class="modal__close-img">
+            </div>
+            <div class="modal__pic">
+                <img src="./img/main-swiper/slide-1.png" class="modal__pic-img">
+            </div>
+            <div class="modal__info d-flex flex-column">
+                <h2 class="modal-label">Узнайте подробнее</h2>
+                <p class="modal-desc">
+                    Оставьте заявку, чтобы получить более
+                    подробную информацию</p>
+                <form class="modal-form">
+                    <div class="custom-form__wrapper">
+                        <input type="text" name="callorder_name" class="custom-form__input" placeholder="Имя" required>
+                    </div>
+                    <div class="custom-form__wrapper">
+                        <input type="tel" class="custom-form__input" placeholder="+7 (999) 999-99-99" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Узнать подробнее</button>
+                    <div class="d-flex align-items-center custom-checkbox">
+                        <input type="checkbox" id="modalForm" class="custom-checkbox__input" checked="" required="">
+                        <label for="modalForm" class="custom-checkbox__text">
+                            <p>Нажимая кнопку, Вы соглашаетесь на обработку <a href="#"
+                                    class="custom-checkbox__link">персональных данных</a>.</p>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="callorderResult">
+        <div class="modal__wrapper position-relative d-flex flex-column flex-lg-row">
+            <div class="modal__close position-absolute" data-fancybox-close>
+                <img src="./img/svg/close-icon.svg" class="modal__close-img">
+            </div>
+            <div class="modal__pic">
+                <img src="./img/main-swiper/slide-1.png" class="modal__pic-img">
+            </div>
+            <div class="modal__info d-flex flex-column">
+                <h2 class="modal-label">Успех!</h2>
+                <p class="modal-desc">
+                    Данные успешно отправлены</p>
+            </div>
+        </div>
+    </div>
 
     <main>
 
@@ -91,7 +201,7 @@
                 </div>
 
                 <div
-                    class="container position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-between">
+                    class="container position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-between mainSwiper__navigation">
                     <div class="d-flex swiper-button swiper-button-prev-main">
                         <img class="arrows arrow-left">
                     </div>
@@ -114,7 +224,8 @@
                                     <div class="swiper-slide__container">
                                         <h1 class="swiper-slide__title">Клубный посёлок премиум-класса в&nbsp;Зубово
                                         </h1>
-                                        <button class="btn btn-primary">Узнать подробнее</button>
+                                        <button class="btn btn-primary" data-fancybox="" data-src="#callorder">Узнать
+                                            подробнее</button>
                                     </div>
                                 </div>
                                 <!-- slide end -->
@@ -145,82 +256,14 @@
             <!-- swiper end -->
 
         </section>
-        <section id="village" class="village">
-            <div class="container">
-                <div class="offset-1 position-relative">
-                    <h2 class="section-title">О клубном посёлке</h2>
-                    <div class="d-flex justify-content-between">
-                        <div class="village__img-container village__img-container-first">
-                            <div class="village__img d-flex position-absolute">
-                                <p class="village__img-title">площадь<br>посёлка</p>
-                                <div class="d-flex translate-middle-x">
-                                    <p class="village__img-text-main">17</p>
-                                    <p class="village__img-text-secondary">Га</p>
-                                </div>
-                            </div>
-                            <div class="position-relative">
-                                <div class="small-image bordered-image bordered-image-first">
-                                    <img src="./img/village/village-1.webp">
-                                </div>
-                                <div class="village__img-circle position-absolute">
-                                    <img src="./img/village/titul_circle.svg" alt="" class="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="village__img-container">
-                            <div class="village__img">
-                                <div class="d-flex">
-                                    <p class="village__img-title">количество<br>домов</p>
-                                    <p class="village__img-text-main translate-middle-x">130</p>
-                                </div>
-                            </div>
-                            <div class="big-image bordered-image">
-                                <img src="./img/village/village-2.webp">
-                            </div>
-                            <div class="d-flex village__square">
-                                <div class="d-flex flex-column justify-content-between">
-                                    <p class="village__img-title">площадь<br>домов</p>
-                                    <p class="village__img-text-tertiary">
-                                        от 104,54 м<sup>2</sup><br>
-                                        до 284,19 м<sup>2</sup>
-                                    </p>
-                                </div>
-                                <div class="">
-                                    <img src="./img/village/house-icon.svg" class="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="village__img-container village__img-container-third d-flex flex-column">
-                        <div class="village__img d-flex position-relative w-fit">
-                            <p class="village__img-title position-absolute start-50">площадь<br>участков</p>
-                            <div class="d-flex position-relative">
-                                <div class="d-flex village__block-from">
-                                    <p class="village__img-text-secondary">от</p>
-                                    <p class="village__img-text-main">8</p>
-                                </div>
-                                <img src="./img/village/line.svg" class="">
-                                <div class="d-flex village__block-to">
-                                    <p class="village__img-text-secondary">до</p>
-                                    <p class="village__img-text-main">14</p>
-                                    <p class="village__img-text-secondary">соток</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="small-image bordered-image">
-                            <img src="./img/village/village-3.webp">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <section id="improvement" class="improvement">
             <div class="container">
+                <h2 class="offset-lg-1 section-title mb-90px mb-sm-40px">Благоустройство</h2>
                 <div class="row mb-90px">
-                    <div class="offset-lg-1 col-lg-4 d-flex flex-column">
-                        <h2 class="section-title mb-90px">Благоустройство</h2>
+                    <div class="offset-lg-1 col-lg-4 d-flex flex-column order-2 order-lg-0">
                         <!-- swiper start -->
-                        <div class="swiper swiper__improvement w-100">
+                        <div class="swiper swiper__improvement w-100 order-2 order-lg-0">
                             <!-- swiper wrapper start -->
                             <div class="swiper-wrapper">
                                 <!-- swiper slide start -->
@@ -255,7 +298,7 @@
                         </div>
                         <!-- swiper end -->
                         <!-- swiper navigation start -->
-                        <div class="d-flex swiper__improvement-navigation">
+                        <div class="d-flex swiper__improvement-navigation order-3 order-lg-0">
                             <div class="d-flex swiper-button swiper-button-prev-improvement">
                                 <img class="arrows arrow-left">
                             </div>
@@ -264,12 +307,12 @@
                             </div>
                         </div>
                         <!-- swiper navigation end -->
-                        <div class="zoom-info align-self-end">
+                        <div class="zoom-info align-items-center align-self-lg-end order-1 order-lg-0">
                             <img src="./img/improvement/zoom-icon.svg" class="zoom-info__icon">
                             <p>Нажмите, чтобы увеличить</p>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-5 mb-sm-10px">
                         <!-- swiper start -->
                         <div class="swiper swiper__gallery">
                             <!-- swiper wrapper start -->
@@ -359,25 +402,14 @@
                     </div>
                 </div>
                 <section>
-                    <!-- <div class="row">
-                        <div class="col-1">1</div>
-                        <div class="col-1">2</div>
-                        <div class="col-1">1</div>
-                        <div class="col-1">2</div>
-                        <div class="col-1">1</div>
-                        <div class="col-1">2</div>
-                        <div class="col-1">1</div>
-                        <div class="col-1">2</div>
-                        <div class="col-1">1</div>
-                        <div class="col-1">2</div>
-                    </div> -->
                     <div class="row">
                         <div class="col-10">
                             <div class="improvement__territory">
                                 <div class="col-8 offset-1">
                                     <h2 class="section-title mb-65px">Безопасная территория</h2>
 
-                                    <div class="d-flex justify-content-between">
+                                    <div
+                                        class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-between column-gap-lg-3 row-gap-30px">
                                         <div class="improvement__card d-flex flex-column">
                                             <img src="./img/improvement/security.png" alt="Фотография камер"
                                                 class="improvement__card-img">
@@ -830,34 +862,35 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="plan__modal position-absolute d-none">
-                            <div class="modal__close-icon position-absolute d-flex align-items-center justify-content-center">
-                                <img src="./img/svg/close-icon.svg" class="modal__close-img">
-                            </div>
-                            <div class="modal__wrapper d-flex flex-column">
-                                <h5 class="modal__title">Участок №18</h5>
-                                <p class="modal__area">Площадь: 10 соток</p>
-                                <p class="modal__area">Площадь: 69,92 м<sup>2</sup></p>
-                                <p class="modal__area">Площадь: 69,92 м<sup>2</sup></p>
-                                <a href="#" class="modal__link">
-                                    <span>Подробнее</span>
-                                    <img src="./img/plan/link-arrow.svg" class="modal__link-img">
-                                </a>
-                            </div>
+
+                    </div>
+                </div>
+                <div class="plan__modal-overlay">
+                    <div class="plan__modal position-absolute d-none">
+                        <div
+                            class="modal__close-icon position-absolute d-flex align-items-center justify-content-center">
+                            <img src="./img/svg/close-icon.svg" class="modal__close-img">
+                        </div>
+                        <div class="modal__wrapper d-flex flex-column">
+                            <h5 class="modal__title">Участок №18</h5>
+                            <p class="modal__area">Площадь: 10 соток</p>
+                            <p class="modal__area">Площадь: 69,92 м<sup>2</sup></p>
+                            <p class="modal__area">Площадь: 69,92 м<sup>2</sup></p>
+                            <a href="#" class="modal__link">
+                                <span>Подробнее</span>
+                                <img src="./img/plan/link-arrow.svg" class="modal__link-img">
+                            </a>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </section>
-
-
 
         <section id="location" class="location">
             <div class="container">
                 <h2 class="offset-1 section-title mb-40px">Как добраться</h2>
                 <div class="row">
-                    <div class="offset-1 col-4">
+                    <div class="offset-lg-1 col-10 col-lg-4 order-2 order-lg-0">
                         <div class="location__card d-flex flex-column">
                             <h3 class="location__card-title">13 км от Монумента Дружбы</h3>
                             <div class="location__card-item d-flex">
@@ -885,7 +918,8 @@
                                 class="location__card-btn btn btn-primary">Построить маршрут</a>
                         </div>
                     </div>
-                    <div class="col-5 d-flex justify-content-center align-items-center">
+                    <div
+                        class="col-10 col-lg-5 d-flex justify-content-center align-items-center mb-sm-20px order-1 order-lg-0">
                         <img src="./img/location/map.png" alt="Маршрут до посёлка" class="location__map-img">
                     </div>
                 </div>
@@ -911,9 +945,10 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <!-- <div class="d-flex justify-content-between"> -->
-                                <div class="d-flex w-100 justify-content-between"> <!-- houses__thumb-swipers -->
+                                <div class="d-flex flex-column flex-lg-row w-100 justify-content-between">
+                                    <!-- houses__thumb-swipers -->
                                     <!-- swiper start -->
-                                    <div class="" style="width: 64%;">
+                                    <div class="left-column order-2 order-lg-0">
                                         <div class="swiper swiper__houses-pic position-relative">
                                             <div
                                                 class="position-absolute start-0 top-50 z-2 m-2 d-flex swiper-button swiper-button-prev-pic">
@@ -928,50 +963,42 @@
                                             <div class="swiper-wrapper">
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                             </div>
@@ -1023,7 +1050,7 @@
                                         </div>
                                     </div>
                                     <!-- text -->
-                                    <div class="d-flex flex-column" style="width: 34%;">
+                                    <div class="d-flex flex-column right-column order-1 order-lg-0">
                                         <div class="d-flex flex-column houses__desc-header">
                                             <h3 class="houses__desc-name">Проект 17</h3>
                                             <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
@@ -1045,8 +1072,9 @@
                                                     </p>
                                                     <p class="houses__area-item">С/у: <span>6,54
                                                             м<sup>2</sup></span></p>
-                                                    <p class="houses__area-item">Кухня-гостинная: <span>52,52
-                                                            м<sup>2</sup></span></p>
+                                                    <p class="houses__area-item">Кухня-гостинная:
+                                                        <span>52,52&nbsp;м<sup>2</sup></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-column w-50 houses__desc-floors-list">
@@ -1058,12 +1086,12 @@
                                                     <p class="houses__area-item">Спальня: <span>15,11 и 15,24
                                                             м<sup>2</sup></span></p>
                                                     <p class="houses__area-item">С/у: <span>7,42
-                                                            м<sup>2</sup></span></p>
+                                                            м<sup>2</sup></span></p>&nb
                                                     <p class="houses__area-item">Кабинет: <span>12,77
                                                             м<sup>2</sup></span></p>
                                                     <p class="houses__area-item">Мастер-спальня с с/у
                                                         и&nbsp;гардеробной:
-                                                        <span>30,07 м<sup>2</sup></span>
+                                                        <span>30,07&nbsp;м<sup>2</sup></span>
                                                     </p>
                                                     <p class="houses__area-item">Высота потолков:
                                                         <span>от&nbsp;3&nbsp;метров</span>
@@ -1082,9 +1110,10 @@
                             </div>
                             <div class="swiper-slide">
                                 <!-- <div class="d-flex justify-content-between"> -->
-                                <div class="d-flex w-100 justify-content-between"> <!-- houses__thumb-swipers -->
+                                <div class="d-flex flex-column flex-lg-row w-100 justify-content-between">
+                                    <!-- houses__thumb-swipers -->
                                     <!-- swiper start -->
-                                    <div class="" style="width: 64%;">
+                                    <div class="left-column order-2 order-lg-0">
                                         <div class="swiper swiper__houses-pic position-relative">
                                             <div
                                                 class="position-absolute start-0 top-50 z-2 m-2 d-flex swiper-button swiper-button-prev-pic">
@@ -1099,49 +1128,42 @@
                                             <div class="swiper-wrapper">
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/1floor.svg" class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                             </div>
@@ -1193,7 +1215,7 @@
                                         </div>
                                     </div>
                                     <!-- text -->
-                                    <div class="d-flex flex-column" style="width: 34%;">
+                                    <div class="d-flex flex-column right-column order-1 order-lg-0">
                                         <div class="d-flex flex-column houses__desc-header">
                                             <h3 class="houses__desc-name">Проект 17</h3>
                                             <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
@@ -1215,8 +1237,9 @@
                                                     </p>
                                                     <p class="houses__area-item">С/у: <span>6,54
                                                             м<sup>2</sup></span></p>
-                                                    <p class="houses__area-item">Кухня-гостинная: <span>52,52
-                                                            м<sup>2</sup></span></p>
+                                                    <p class="houses__area-item">Кухня-гостинная:
+                                                        <span>52,52&nbsp;м<sup>2</sup></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-column w-50 houses__desc-floors-list">
@@ -1233,7 +1256,7 @@
                                                             м<sup>2</sup></span></p>
                                                     <p class="houses__area-item">Мастер-спальня с с/у
                                                         и&nbsp;гардеробной:
-                                                        <span>30,07 м<sup>2</sup></span>
+                                                        <span>30,07&nbsp;м<sup>2</sup></span>
                                                     </p>
                                                     <p class="houses__area-item">Высота потолков:
                                                         <span>от&nbsp;3&nbsp;метров</span>
@@ -1252,9 +1275,10 @@
                             </div>
                             <div class="swiper-slide">
                                 <!-- <div class="d-flex justify-content-between"> -->
-                                <div class="d-flex w-100 justify-content-between"> <!-- houses__thumb-swipers -->
+                                <div class="d-flex flex-column flex-lg-row w-100 justify-content-between">
+                                    <!-- houses__thumb-swipers -->
                                     <!-- swiper start -->
-                                    <div class="" style="width: 64%;">
+                                    <div class="left-column order-2 order-lg-0">
                                         <div class="swiper swiper__houses-pic position-relative">
                                             <div
                                                 class="position-absolute start-0 top-50 z-2 m-2 d-flex swiper-button swiper-button-prev-pic">
@@ -1269,49 +1293,42 @@
                                             <div class="swiper-wrapper">
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/1floor.svg" class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/1floor.svg" class="floor">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                                 <!-- swiper-slide start -->
                                                 <div class="swiper-slide">
-                                                    <img src="./img/houses/house-img.png"
-                                                        class="swiper-slide__house-pic">
+                                                    <img src="./img/houses/house-img.png">
                                                 </div>
                                                 <!-- swiper-slide end -->
                                             </div>
@@ -1363,7 +1380,7 @@
                                         </div>
                                     </div>
                                     <!-- text -->
-                                    <div class="d-flex flex-column" style="width: 34%;">
+                                    <div class="d-flex flex-column right-column order-1 order-lg-0">
                                         <div class="d-flex flex-column houses__desc-header">
                                             <h3 class="houses__desc-name">Проект 17</h3>
                                             <p class="houses__desc-area">Плoщaдь дома: 248,34 м<sup>2</sup></p>
@@ -1385,8 +1402,9 @@
                                                     </p>
                                                     <p class="houses__area-item">С/у: <span>6,54
                                                             м<sup>2</sup></span></p>
-                                                    <p class="houses__area-item">Кухня-гостинная: <span>52,52
-                                                            м<sup>2</sup></span></p>
+                                                    <p class="houses__area-item">Кухня-гостинная:
+                                                        <span>52,52&nbsp;м<sup>2</sup></span>
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-column w-50 houses__desc-floors-list">
@@ -1403,7 +1421,7 @@
                                                             м<sup>2</sup></span></p>
                                                     <p class="houses__area-item">Мастер-спальня с с/у
                                                         и&nbsp;гардеробной:
-                                                        <span>30,07 м<sup>2</sup></span>
+                                                        <span>30,07&nbsp;м<sup>2</sup></span>
                                                     </p>
                                                     <p class="houses__area-item">Высота потолков:
                                                         <span>от&nbsp;3&nbsp;метров</span>
@@ -1428,9 +1446,9 @@
 
         <section id="banks" class="banks">
             <div class="container">
-                <div class="row justify-content-center mb-65px">
-                    <div class="col-4">
-                        <h2 class="section-title mb-50px">Способы покупки</h2>
+                <div class="row justify-content-center">
+                    <div class="col-10 col-lg-4 order-1 order-lg-0">
+                        <h2 class="section-title mb-50px mb-sm-20px">Способы покупки</h2>
                         <div class="banks__text d-flex flex-column">
                             <p class="banks__text-main">Подберём выгодную ипотеку и поможем получить одобрение банка</p>
                             <ul class="banks__list">
@@ -1442,7 +1460,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-10 col-lg-4 order-3 order-lg-0">
                         <form id="mortgageForm" class="banks__form">
                             <h3 class="banks__form-title">
                                 Нужно предложение?
@@ -1468,9 +1486,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-8">
+                    <div class="col-10 col-lg-8 order-2 order-lg-0 banks__cards-wrapper">
                         <p class="banks__cards-text">Мы аккредитованы в ведущих банках России</p>
                         <div class="banks__cards">
                             <div class="banks__card">
@@ -1494,7 +1510,7 @@
                             <div class="banks__card">
                                 <img src="./img/banks/uralbank.svg" alt="Уральский банк" class="banks__card-img">
                             </div>
-                            <div class="banks__card">
+                            <div class="banks__card banks__card_type_domrf">
                                 <img src="./img/banks/domrfbank.svg" alt="Дом.РФ банк" class="banks__card-img">
                             </div>
                             <div class="banks__card">
@@ -1512,23 +1528,23 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="row justify-content-center order-2">
+                    
+                </div> -->
             </div>
         </section>
-
-
-
 
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="row mb-40px">
-                <div class="col-lg-3 footer__logo-container">
+            <div class="row mb-40px mb-sm-20px row-gap-20px">
+                <div class="col-lg-3 footer__logo-container d-flex justify-content-center justify-content-lg-start">
                     <a href="" class="footer__logo">
                         <img src="./img/svg/logo-full.svg" alt="Titul" class="footer__logo-img logo">
                     </a>
                 </div>
-                <div class="col-lg-5 footer__location d-flex">
+                <div class="col-lg-5 footer__location d-flex flex-column flex-lg-row order-2 order-lg-0">
                     <div class="footer__location-item">
                         <div class="footer__location-img-container d-flex">
                             <img src="./img/svg/location.svg" alt="Иконка локации" class="footer__location-img">
@@ -1547,7 +1563,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 footer__contacts d-flex flex-column align-items-end">
+                <div
+                    class="col-lg-2 footer__contacts d-flex flex-lg-column justify-content-between align-items-center align-items-lg-end">
                     <div class="footer__phone">
                         <a href="tel:+73472010000" class="footer__phone-link">201-00-00</a>
                     </div>

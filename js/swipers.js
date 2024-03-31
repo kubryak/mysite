@@ -14,6 +14,7 @@ const backgroundSwiper = new Swiper(".swiper.background-swiper", {
 
 const mainSwiper = new Swiper(".swiper.main-swiper__swiper", {
     slidesPerView: 1,
+    spaceBetween: 50,
     loop: true,
 });
 
@@ -23,6 +24,7 @@ backgroundSwiper.controller.control = mainSwiper;
 
 const improvementSwiper = new Swiper(".swiper.swiper__improvement", {
     slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
     allowTouchMove: false,
     navigation: {
@@ -33,35 +35,12 @@ const improvementSwiper = new Swiper(".swiper.swiper__improvement", {
 
 const gallerySwiper = new Swiper(".swiper.swiper__gallery", {
     slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
     allowTouchMove: false,
 });
 
 improvementSwiper.controller.control = gallerySwiper;
-
-// const housesThumbSwiper = new Swiper('.swiper.swiper__houses-thumb', {
-//   spaceBetween: 14,
-//   slidesPerView: 'auto',
-// });
-
-// const housesPicSwiper = new Swiper('.swiper.swiper__houses-pic', {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   navigation: {
-//     nextEl: '.swiper-button.swiper-button-next-pic',
-//     prevEl: '.swiper-button.swiper-button-prev-pic',
-//   },
-// });
-
-// const housesSwiper = new Swiper('.swiper.swiper__houses', {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   allowTouchMove: false,
-//   navigation: {
-//     nextEl: '.swiper-button.swiper-button-next-text',
-//     prevEl: '.swiper-button.swiper-button-prev-text',
-//   },
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
     let housesPicSwiper; // Переменная для хранения housesPicSwiper
@@ -117,11 +96,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Инициализируем вложенный Swiper только на активном слайде
         housesThumbSwiper = new Swiper(nestedThumbSwiperContainer, {
-          spaceBetween: 14,
-          slidesPerView: "auto",
-          nested: true,
-
-      });
+            spaceBetween: 8,
+            slidesPerView: "auto",
+            nested: true,
+            breakpoints: {
+                991: {
+                    spaceBetween: 14,
+                },
+            },
+        });
 
         housesPicSwiper = new Swiper(nestedPicSwiperContainer, {
             slidesPerView: 1,
@@ -133,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 prevEl: ".swiper-button.swiper-button-prev-pic",
             },
             thumbs: {
-              swiper: housesThumbSwiper,
+                swiper: housesThumbSwiper,
             },
         });
     }

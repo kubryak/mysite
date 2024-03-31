@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const parentBlock = document.querySelector(".plan__map-wrapper");
     const modalCloseBtn = document.querySelector(".modal__close-icon");
     const maskWrapper = document.querySelector(".plan__mask-wrapper");
+    const modalOverlay = document.querySelector(".plan__modal-overlay");
 
     allHome.addEventListener("click", function (event) {
         if (event.target.classList.contains("home-area")) {
@@ -58,19 +59,20 @@ document.addEventListener("DOMContentLoaded", function () {
                         (relativeX < 250 && relativeY < 250) ||
                         relativeX < 250
                     ) {
-                        modal.style.top = relativeY + "px";
+                        modal.style.top = relativeY + 100 + "px";
                         modal.style.left = relativeX + 75 + "px";
                     } else if (relativeY < 250) {
-                        modal.style.top = relativeY - 50 + "px";
+                        modal.style.top = relativeY + 80 + "px";
                         modal.style.left = relativeX - 240 + "px";
                     } else {
-                        modal.style.top = relativeY - 230 + "px";
+                        modal.style.top = relativeY - 130 + "px";
                         modal.style.left = relativeX - 230 + "px";
                     }
                 } else {
                     modal.classList.add("plan__modal_type_mobile");
                     maskWrapper.classList.add("plan__mask-wrapper_type_mobile");
                 }
+                modalOverlay.classList.remove("d-none");
                 modal.classList.remove("d-none");
             }
         }
@@ -93,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         maskWrapper.classList.remove("plan__mask-wrapper_type_mobile");
         modal.classList.add("d-none");
         modal.classList.remove("plan__modal_type_mobile");
+        modalOverlay.classList.add("d-none");
 
         const activeArea = document.querySelector(".home-area_active");
         if (activeArea) {
@@ -112,4 +115,70 @@ document.addEventListener("DOMContentLoaded", function () {
                 element.style.display = "none";
             }, 500);
         });
+
+    // open menu
+
+    const mainNav = document.querySelector(".nav");
+    const navLinks = document.querySelectorAll(".nav__menu-list");
+    const openNavBtn = document.querySelector(".button__burger-menu");
+    const closeNavBtn = document.querySelector(".nav__close-btn");
+
+    // scroll to anchor
+
+    navLinks.forEach(function (menuLink) {
+        menuLink.addEventListener("click", function (event) {
+            let target = event.target;
+
+            // Получаем значение атрибута href, содержащего id якоря
+            let anchorId = target.getAttribute("href");
+
+            // Находим целевой элемент якоря по его id
+            let anchorElement = document.querySelector(anchorId);
+
+            if (anchorElement) {
+                // Прокручиваем страницу к целевому элементу
+                anchorElement.scrollIntoView({
+                    behavior: "smooth", // Добавляем плавную анимацию прокрутки
+                });
+            }
+
+            if (target.classList.contains("nav__menu-link")) {
+                event.preventDefault();
+
+                mainNav.classList.remove("nav_type_active");
+                document.body.classList.remove("no-scroll");
+            }
+        });
+    });
+
+    openNavBtn.addEventListener("click", function () {
+        mainNav.classList.toggle("nav_type_active");
+        document.body.classList.add("no-scroll");
+    });
+
+    closeNavBtn.addEventListener("click", function () {
+        mainNav.classList.toggle("nav_type_active");
+        document.body.classList.remove("no-scroll");
+    });
+
+    function changeModalText(element) {
+        let label = element.getAttribute('data-label') || "";  // Заголовок
+        let text = element.getAttribute('data-text') || "";   // Текст под заголовком
+        let btn = element.getAttribute('data-btn') || "";     // Кнопка
+    
+        document.querySelector('#callorder .modal-label').innerHTML = label || "Узнайте подробее";
+    
+        document.querySelector('#callorder .modal-desc').innerHTML = text || "Оставьте заявку, чтобы получить более подробную информацию";
+    
+        document.querySelector('#callorder button[type="submit"]').innerHTML = btn || "Узнать подробнее";
+      }
+    
+      document.body.addEventListener('click', function (event) {
+        let btnClicked = event.target;
+    
+        if (btnClicked.getAttribute('data-src') === "#callorder") {
+          changeModalText(btnClicked);
+          event.preventDefault();
+        }
+      });
 });
