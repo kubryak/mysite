@@ -5,7 +5,7 @@ const backgroundSwiper = new Swiper(".swiper.background-swiper", {
     pagination: {
         el: ".main-swiper__pagination.swiper-pagination",
         clickable: true,
-      },
+    },
 
     navigation: {
         nextEl: ".swiper-button.swiper-button-next-main",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const activeSlide = this.slides[this.activeIndex];
                 initializeNestedSwiper(activeSlide);
             },
-            slideChange: function () {
+            slideChangeTransitionEnd: function () {
                 // При изменении слайда получаем новый активный слайд и инициализируем на нем housesPicSwiper
                 const activeSlide = this.slides[this.activeIndex];
                 initializeNestedSwiper(activeSlide);
@@ -120,5 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 swiper: housesThumbSwiper,
             },
         });
+
+        const newSlide = document.querySelector('.swiper__houses .swiper-slide-active')
+
+        const btnFirst = newSlide.querySelector('.floor-1')
+        const btnSecond = newSlide.querySelector('.floor-2')
+
+        btnFirst.addEventListener('click', () => {
+            housesPicSwiper.slideTo(0, 250)
+        })
+        
+        btnSecond.addEventListener('click', () => {
+            housesPicSwiper.slideTo(1, 250)
+        })
     }
 });
