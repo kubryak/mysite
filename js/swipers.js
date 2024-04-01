@@ -12,7 +12,6 @@ const backgroundSwiper = new Swiper(".swiper.background-swiper", {
         prevEl: ".swiper-button.swiper-button-prev-main",
     },
 });
-console.log(backgroundSwiper)
 
 const mainSwiper = new Swiper(".swiper.main-swiper__swiper", {
     slidesPerView: 1,
