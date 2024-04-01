@@ -4,12 +4,35 @@
 
     .section-title {
         margin-bottom: 100px;
+
+        @media screen and (max-width: 991px) {
+            max-width: 335px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .container-wrapper {
+            max-width: 340px;
+            margin: 0 auto;
+        }
     }
 
     &__img {
+        @media screen and (max-width: 991px) {
+            &-text-wrapper {
+                margin-top: 10px;
+            }
+        }
+
         &-title {
             font-size: 20px;
             color: var(--color-gray);
+
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
+            }
         }
 
         &-text-main {
@@ -17,18 +40,35 @@
             color: var(--color-gold);
             @include fluid-text(156, 81);
             line-height: 100%;
+
+            @media screen and (max-width: 991px) {
+                font-size: 81px;
+            }
         }
         &-text-secondary {
             font-family: var(--font-family-base);
             font-size: 20px;
             font-weight: 500;
             color: var(--color-light);
+
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
+            }
         }
 
         &-text-tertiary {
             color: var(--color-gold);
             font-size: 30px;
             font-weight: 500;
+
+            @media screen and (max-width: 1250px) {
+                font-size: 24px;
+                text-align: start;
+
+                span {
+                    font-size: 14px;
+                }
+            }
         }
 
         & &-text-secondary {
@@ -38,7 +78,48 @@
         &-container {
             &-first {
                 width: 613px;
+
+                @media screen and (max-width: 991px) {
+                    width: 100%;
+                }
             }
+
+            &-second {
+                @media screen and (max-width: 1400px) {
+                    .house-img-wrapper {
+                        display: flex;
+                        align-items: end;
+                    }
+                    .house-img {
+                        width: 190px;
+                    }
+                }
+
+                @media screen and (max-width: 991px) {
+                    width: fit-content;
+                    text-align: end;
+                    margin-left: auto;
+                    margin-top: -80px;
+
+                    .translate-middle-x {
+                        transform: none !important;
+                    }
+
+                    .village__img-title {
+                        text-align: start;
+                    }
+
+                    .village__img-text-main {
+                        margin-top: -20px;
+                        margin-bottom: 20px;
+                    }
+
+                    .house-img {
+                        width: 160px;
+                    }
+                }
+            }
+
             &-third {
                 width: 55%;
                 position: absolute;
@@ -46,9 +127,28 @@
                 right: 0;
                 transform: translate(-70%);
 
+                @media screen and (max-width: 1400px) {
+                    .village__img-title {
+                        left: 44% !important;
+                    }
+                }
+
                 .village__img {
                     align-self: end;
                     transform: translate(0%, 50%);
+                    @media screen and (max-width: 991px) {
+                        transform: translate(0%, 8%);
+                    }
+                }
+
+                @media screen and (max-width: 991px) {
+                    width: 100%;
+                    position: static;
+                    transform: none;
+
+                    .village__img-title {
+                        left: 50% !important;
+                    }
                 }
             }
         }
@@ -66,6 +166,25 @@
 
     &__square {
         column-gap: 20px;
+
+        @media screen and (max-width: 991px) {
+            position: absolute;
+            transform: translate(-66%, -70%);
+
+            &-img {
+                width: 160px;
+                display: flex;
+                align-self: end;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text-wrapper {
+                max-width: 80px;
+            }
+        }
     }
 
     &__block {
@@ -73,25 +192,44 @@
             position: relative;
             right: -2rem;
             top: -2rem;
+
+            @media screen and (max-width: 1400px) {
+                right: -1rem;
+            }
+
+            @media screen and (max-width: 991px) {
+                top: 0;
+                right: -0.5rem;
+            }
         }
 
         &-to {
             position: relative;
             left: -3rem;
             bottom: -2.5rem;
+
+            @media screen and (max-width: 1400px) {
+                left: -1rem;
+            }
+
+            @media screen and (max-width: 991px) {
+                left: -1rem;
+                bottom: -1.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__line-img {
+            height: 100px;
         }
     }
 }
 
 .small-image {
     @include fluid-size-img(455, 230);
-    // width: 455px;
-    // height: 455px;
 
     & img {
         @include fluid-size-img(453, 228);
-        // width: 453px;
-        // height: 453px;
     }
 }
 
@@ -106,6 +244,16 @@
         // width: 613px;
         // height: 613px;
     }
+
+    @media screen and (max-width: 991px) {
+        @include fluid-size-img(455, 230);
+
+        margin-bottom: 0;
+
+        & img {
+            @include fluid-size-img(453, 228);
+        }
+    }
 }
 
 .bordered-image {
@@ -116,26 +264,18 @@
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow);
+    border: 2px solid var(--color-gold);
 
     & img {
         position: relative;
         border-radius: 50%;
     }
 
-    &::before {
-        --border-width: -1px; /*Ширина границы*/
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: var(--border-width);
-        left: var(--border-width);
-        right: var(--border-width);
-        bottom: var(--border-width);
-        border-radius: inherit;
-        background: var(--metall-gradient);
-    }
-
     &-first {
         left: 25%;
+
+        @media screen and (max-width: 991px) {
+            left: 30%;
+        }
     }
 }

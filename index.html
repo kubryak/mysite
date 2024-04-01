@@ -198,9 +198,7 @@
                         <!-- slide end -->
                     </div>
                     <!-- swiper-wrapper end -->
-                </div>
-
-                <div
+                    <div
                     class="container position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-between mainSwiper__navigation">
                     <div class="d-flex swiper-button swiper-button-prev-main">
                         <img class="arrows arrow-left">
@@ -210,8 +208,11 @@
                         <img class="arrows arrow-right">
                     </div>
                 </div>
-            </section>
+                </div>
             <!-- swiper end -->
+
+            </section>
+
             <!-- swiper start -->
             <section class="position-absolute w-100 mainSwiper__main-swiper">
                 <div class="d-flex align-items-center justify-content-center">
@@ -255,6 +256,79 @@
             </section>
             <!-- swiper end -->
 
+        </section>
+
+        
+        <section id="village" class="village">
+            <div class="container">
+                <div class="offset-lg-1 position-relative container-wrapper">
+                    <h2 class="section-title">О клубном посёлке TITUL</h2>
+                    <div class="d-flex flex-column flex-lg-row justify-content-between">
+                        <div class="village__img-container village__img-container-first order-lg-0 order-1">
+                            <div class="village__img d-flex position-absolute">
+                                <p class="village__img-title">площадь<br>посёлка</p>
+                                <div class="d-flex translate-middle-x village__img-text-wrapper">
+                                    <p class="village__img-text-main">17</p>
+                                    <p class="village__img-text-secondary">Га</p>
+                                </div>
+                            </div>
+                            <div class="position-relative">
+                                <div class="small-image bordered-image bordered-image-first">
+                                    <img src="./img/village/village-1.webp">
+                                </div>
+                                <div class="village__img-circle position-absolute">
+                                    <img src="./img/village/titul_circle.svg" alt="" class="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="village__img-container village__img-container-second order-lg-0 order-3 position-relative">
+                            <div class="village__img">
+                                <div class="d-flex flex-column flex-lg-row align-items-end align-items-lg-start">
+                                    <p class="village__img-title">количество<br>домов</p>
+                                    <p class="village__img-text-main translate-middle-x">130</p>
+                                </div>
+                            </div>
+                            <div class="big-image bordered-image">
+                                <img src="./img/village/village-2.webp">
+                            </div>
+                            <div class="d-flex village__square position-lg-static flex-column flex-lg-row">
+                                <div class="d-flex flex-column justify-content-between text-wrapper">
+                                    <p class="village__img-title">площадь<br>домов</p>
+                                    <p class="village__img-text-tertiary">
+                                        <span>от</span> 104,54 <span>м<sup>2</sup></span><br>
+                                        <span>до</span> 284,19 <span>м<sup>2</sup></span>
+                                    </p>
+                                </div>
+                                <div class="house-img-wrapper">
+                                    <img src="./img/village/house-icon.svg" class="house-img">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="village__img-container village__img-container-third d-flex flex-column order-lg-0 order-2">
+                            <div class="village__img d-flex position-relative w-fit">
+                                <p class="village__img-title position-absolute start-50">площадь<br>участков</p>
+                                <div class="d-flex position-relative">
+                                    <div class="d-flex village__block-from">
+                                        <p class="village__img-text-secondary">от</p>
+                                        <p class="village__img-text-main">8</p>
+                                    </div>
+                                    <img src="./img/village/line.svg" class="village__line-img d-none d-xxl-block">
+                                    <img src="./img/village/line-small.svg" class="village__line-img d-block d-xxl-none">
+                                    <div class="d-flex village__block-to">
+                                        <p class="village__img-text-secondary">до</p>
+                                        <p class="village__img-text-main">14</p>
+                                        <p class="village__img-text-secondary">соток</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small-image bordered-image">
+                                <img src="./img/village/village-3.webp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="improvement" class="improvement">
@@ -405,9 +479,8 @@
                     <div class="row">
                         <div class="col-10">
                             <div class="improvement__territory">
-                                <div class="col-8 offset-1">
+                                <div class="offset-lg-1 col-10 col-lg-8 improvement__territory-wrapper">
                                     <h2 class="section-title mb-65px">Безопасная территория</h2>
-
                                     <div
                                         class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-between column-gap-lg-3 row-gap-30px">
                                         <div class="improvement__card d-flex flex-column">
@@ -451,12 +524,12 @@
         </section>
 
         <section id="plan" class="plan">
-            <div class="container position-relative">
-                <h2 class="offset-1 section-title mb-25px">Генплан посёлка</h2>
-                <div class="position-relative">
-                    <div class="plan__map-helper"></div>
-                    <div class="plan__scroll">
-                </div>
+            <div class="container">
+                <h2 class="offset-lg-1 section-title mb-25px">Генплан посёлка</h2>
+            </div>
+            <div class="container container_type_map position-relative">
+                <div class="plan__map-helper"></div>
+                <div class="plan__scroll">
                     <div class="col-10 position-relative plan__map-wrapper">
                         <img src="./img/plan/plan.png" alt="Генплан посёлка" class="plan__map">
                         <div class="position-absolute top-0 start-0 bottom-0 end-0 plan__mask-wrapper">
@@ -890,7 +963,7 @@
 
         <section id="location" class="location">
             <div class="container">
-                <h2 class="offset-1 section-title mb-40px">Как добраться</h2>
+                <h2 class="offset-lg-1 section-title mb-40px">Как добраться</h2>
                 <div class="row">
                     <div class="offset-lg-1 col-10 col-lg-4 order-2 order-lg-0">
                         <div class="location__card d-flex flex-column">

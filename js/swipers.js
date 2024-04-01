@@ -5,12 +5,14 @@ const backgroundSwiper = new Swiper(".swiper.background-swiper", {
     pagination: {
         el: ".main-swiper__pagination.swiper-pagination",
         clickable: true,
-    },
+      },
+
     navigation: {
         nextEl: ".swiper-button.swiper-button-next-main",
         prevEl: ".swiper-button.swiper-button-prev-main",
     },
 });
+console.log(backgroundSwiper)
 
 const mainSwiper = new Swiper(".swiper.main-swiper__swiper", {
     slidesPerView: 1,
